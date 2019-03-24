@@ -30,8 +30,11 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
+            
+            
+            
 
-			//TODO: Complete this method and utilize the rest of the class structure to play the game.
+            //TODO: Complete this method and utilize the rest of the class structure to play the game.
 
             /*
              * Complete this method by constructing the logic for the actual playing of Tic Tac Toe. 
@@ -47,6 +50,8 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
+          
+
 		}
 
 
@@ -84,6 +89,18 @@ namespace Lab04_TicTacToe.Classes
 
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached. 
+                for (int j = 0; j < winners.Length; j++)
+                    { 
+                     if()
+                    {
+
+                    }
+              }
+
+
+
+                //IM STUCK
+                
 			
 			}
 
