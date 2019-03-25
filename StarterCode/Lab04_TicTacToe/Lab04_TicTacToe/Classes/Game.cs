@@ -6,6 +6,9 @@ namespace Lab04_TicTacToe.Classes
 {
 	class Game
 	{
+        /// <summary>
+        /// getters and setters for class information
+        /// </summary>
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
 		public Player Winner { get; set; }
@@ -88,7 +91,7 @@ namespace Lab04_TicTacToe.Classes
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
 				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
+				// return true if a winnerj has been reached. 
                 for (int j = 0; j < winners.Length; j++)
                     { 
                      if()
@@ -97,6 +100,13 @@ namespace Lab04_TicTacToe.Classes
                     }
               }
 
+                //player 1 choose number
+                //verify the number is available and not taken, change the location to marker
+                //switch player
+                //have player 2 select
+                //verify
+                //switch player
+                //check for winner or draw every loop
 
 
                 //IM STUCK i have been struggling with this all day today i cannot make snese of this.
