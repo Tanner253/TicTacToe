@@ -145,7 +145,7 @@ namespace Lab04_TicTacToe.Classes
 
 
                 //IM STUCK i have been struggling with this all day today i cannot make snese of this.
-                
+                 
 			
 			}
 
