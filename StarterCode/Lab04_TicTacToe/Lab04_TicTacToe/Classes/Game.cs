@@ -29,6 +29,7 @@ namespace Lab04_TicTacToe.Classes
 
 		/// <summary>
 		/// Activate the Play of the game
+        /// Chris morto helped alot with this method - i was super close !
 		/// </summary>
 		/// <returns>Winner</returns>
 		public Player Play()
@@ -142,7 +143,7 @@ namespace Lab04_TicTacToe.Classes
 
 
                 //IM STUCK i have been struggling with this all day today i cannot make snese of this.
-                 
+                 //got help from chris
 			
 			}
 
