@@ -33,8 +33,42 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
+
+            int turns = 0;
+            Player player = null;
+            Board.DisplayBoard();
             
-            
+            while(Winner == null && turns < 9)
+            {
+                if (PlayerOne.IsTurn)
+                {
+                    player = PlayerOne;
+                    PlayerOne.TakeTurn(Board);
+                }
+                if (PlayerTwo.IsTurn)
+                {
+                    player = PlayerTwo;
+                    PlayerTwo.TakeTurn(Board);
+                }
+                //reshow board with changes
+                Console.Clear();
+                Board.DisplayBoard();
+                //check for winner
+                bool win = CheckForWinner(Board);
+                //comes back true or false
+                if (win)
+                {
+                    Winner = player;
+                    turns++;
+                }
+                if(win == false)
+                {
+                    turns++;
+                    SwitchPlayer();
+                }
+
+            }
+            return Winner;
             
 
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
@@ -92,13 +126,13 @@ namespace Lab04_TicTacToe.Classes
 
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winnerj has been reached. 
-                for (int j = 0; j < winners.Length; j++)
-                    { 
-                     if()
+                
+                 if(a == b && b == c)
                     {
-
+                    return true;
                     }
-              }
+                return false;
+              
 
                 //player 1 choose number
                 //verify the number is available and not taken, change the location to marker
