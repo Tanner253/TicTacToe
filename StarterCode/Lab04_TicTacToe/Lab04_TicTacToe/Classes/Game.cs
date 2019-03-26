@@ -66,6 +66,7 @@ namespace Lab04_TicTacToe.Classes
                     turns++;
                     SwitchPlayer();
                 }
+                Console.WriteLine($"Turns : {turns}");
 
             }
             return Winner;
