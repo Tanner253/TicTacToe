@@ -132,9 +132,6 @@ namespace Lab04_TicTacToe.Classes
                     {
                     return true;
                     }
-                return false;
-              
-
                 //player 1 choose number
                 //verify the number is available and not taken, change the location to marker
                 //switch player
