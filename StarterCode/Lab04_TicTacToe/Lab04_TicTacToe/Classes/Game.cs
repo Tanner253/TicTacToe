@@ -6,6 +6,9 @@ namespace Lab04_TicTacToe.Classes
 {
 	class Game
 	{
+        /// <summary>
+        /// getters and setters for class information
+        /// </summary>
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
 		public Player Winner { get; set; }
@@ -30,8 +33,43 @@ namespace Lab04_TicTacToe.Classes
 		/// <returns>Winner</returns>
 		public Player Play()
 		{
+
+            int turns = 0;
+            Player player = null;
+            Board.DisplayBoard();
             
-            
+            while(Winner == null && turns < 9)
+            {
+                if (PlayerOne.IsTurn)
+                {
+                    player = PlayerOne;
+                    PlayerOne.TakeTurn(Board);
+                }
+                if (PlayerTwo.IsTurn)
+                {
+                    player = PlayerTwo;
+                    PlayerTwo.TakeTurn(Board);
+                }
+                //reshow board with changes
+                Console.Clear();
+                Board.DisplayBoard();
+                //check for winner
+                bool win = CheckForWinner(Board);
+                //comes back true or false
+                if (win)
+                {
+                    Winner = player;
+                    turns++;
+                }
+                if(win == false)
+                {
+                    turns++;
+                    SwitchPlayer();
+                }
+                Console.WriteLine($"Turns : {turns}");
+
+            }
+            return Winner;
             
 
             //TODO: Complete this method and utilize the rest of the class structure to play the game.
@@ -88,19 +126,23 @@ namespace Lab04_TicTacToe.Classes
 				string c = Board.GameBoard[p3.Row, p3.Column];
 
 				// TODO:  Determine a winner has been reached. 
-				// return true if a winner has been reached. 
-                for (int j = 0; j < winners.Length; j++)
-                    { 
-                     if()
+				// return true if a winnerj has been reached. 
+                
+                 if(a == b && b == c)
                     {
-
+                    return true;
                     }
-              }
-
+                //player 1 choose number
+                //verify the number is available and not taken, change the location to marker
+                //switch player
+                //have player 2 select
+                //verify
+                //switch player
+                //check for winner or draw every loop
 
 
                 //IM STUCK i have been struggling with this all day today i cannot make snese of this.
-                
+                 
 			
 			}
 

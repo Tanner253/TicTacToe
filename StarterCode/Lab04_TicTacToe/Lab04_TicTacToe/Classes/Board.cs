@@ -16,7 +16,9 @@ namespace Lab04_TicTacToe.Classes
 			{"7", "8", "9"},
 		};
 
-
+        /// <summary>
+        /// renders board to program
+        /// </summary>
 		public void DisplayBoard()
 		{
 
@@ -24,7 +26,7 @@ namespace Lab04_TicTacToe.Classes
             {
                 for (int j = 0; j < GameBoard.GetLength(1); j++)
                 {
-                    Console.Write(GameBoard[i,j] + "\t");
+                    Console.Write("|" + GameBoard[i, j]);
                 }
                 Console.WriteLine();
             }

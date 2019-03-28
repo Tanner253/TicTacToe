@@ -17,7 +17,7 @@ namespace Lab04_TicTacToe.Classes
 		/// </summary>
 		public bool IsTurn { get; set; }
 
-
+        //birdges the gap between users selection and the code change
 		public Position GetPosition(Board board)
 		{
 			Position desiredCoordinate = null;
@@ -31,7 +31,7 @@ namespace Lab04_TicTacToe.Classes
 
 		}
 
-
+        //position selections, have cases, which in turn dictte which location gets chosen.
 		public static Position PositionForNumber(int position)
 		{
 			switch (position)
@@ -50,7 +50,7 @@ namespace Lab04_TicTacToe.Classes
 			}
 		}
 
-	
+	        //allows the user to take their turn and update the Board
 		public void TakeTurn(Board board)
 		{
 			IsTurn = true;
