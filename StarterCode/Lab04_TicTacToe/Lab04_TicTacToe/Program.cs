@@ -42,17 +42,38 @@ namespace Lab04_TicTacToe
             Console.WriteLine("Let's Play!");
 
             //start new game
-            
+
             Game game = new Game(player1, player2);
 
             Player winner = game.Play();
-            if(!(winner is null))
+            if (!(winner is null))
             {
                 Console.WriteLine($"{winner.Name}, Has won the game! Better luck next time!");
             }
             else
             {
                 Console.WriteLine("Well played! Tie game!");
+                Console.WriteLine("Rematch? Y/N");
+                string rematch = Console.ReadLine();
+                switch (rematch)
+                {
+                    case "Y":
+                        {
+                            Game rematchGame = new Game(player1, player2);
+                            rematchGame.Play();
+
+                        }
+                        break;
+                    case "N":
+                        {
+                            Console.WriteLine("Thanks for playing!");
+                        }
+                        break;
+
+                }
+
+
+
             }
         }
     }
